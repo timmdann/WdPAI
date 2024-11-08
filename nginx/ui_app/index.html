@@ -3,30 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GET and POST Requests</title>
-    <script src="./requests_async.js"></script>
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="./requests_async.js" defer></script>
 </head>
 <body>
-    <h1>Send GET and POST Requests</h1>
+    <div class="container-main">
+        <div class="container-input">
+            <h1>Let's level up your brand, together</h1>
 
-    <!-- Form for GET Request -->
-    <h2>GET Request</h2>
-    <label for="getInputField">Enter path for GET request:</label>
-    <input type="text" id="getInputField" placeholder="Enter path for GET request">
-    <button onclick="sendGetRequest()">Send GET Request</button>
+            <h2>First name</h2>
+            <input type="text" id="getFirstName" class="input-field" placeholder="First name" required>
+            <br>
 
-    <h3>GET Response:</h3>
-    <pre id="getResponse"></pre>
+            <h2>Last name</h2>
+            <input type="text" id="getLastName" class="input-field" placeholder="Last name" required>
+            <br>
 
-    <hr>
+            <h2>Role</h2>
+            <label for="role"></label>
+            <select id="role" class="input-field" required>
+                <option value="" disabled selected>Select role</option>
+                <option value="Menadżer">Menadżer</option>
+                <option value="Projektant">Projektant</option>
+                <option value="Development-Lead">Development Lead</option>
+                <option value="Product-Designer">Product Designer</option>
+                <option value="CTO">CTO</option>
+            </select>
 
-    <!-- Form for POST Request -->
-    <h2>POST Request</h2>
-    <label for="postNameField">Enter name for POST request:</label>
-    <input type="text" id="postNameField" placeholder="Enter name for POST request">
-    <button onclick="sendPostRequest()">Send POST Request</button>
+            <br><br>
+            <label class='checkbox-privacy'>
+                <input type="checkbox" id="privacyCheck" required>
+                You agree to our friendly privacy policy
+            </label>
+            <br><br>
 
-    <h3>POST Response:</h3>
-    <pre id="postResponse"></pre>
+            <div class="Button">
+                <button class="submit-btn" onclick="sendPostRequest()">SUBMIT</button>
+            </div>
+        </div>
+
+
+        <h3>Team Members</h3>
+        <ul id="teamList"></ul>
+    </div>
+
+
+
+
+
 </body>
 </html>
